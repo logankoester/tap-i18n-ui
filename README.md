@@ -1,10 +1,12 @@
-# tap-i18n-ui
+# meteor-i18n-ui
+
+> Fork of tap:i18n-ui with `martino:i18n-conf` compatibility and Ionic Framework
 
 ## UI helpers for the [tap-i18n](https://github.com/TAPevents/tap-i18n) package
 
 ### Install
 
-    $ meteor add tap:i18n-ui
+    $ meteor add ldk:i18n-ui
 
 ### Additional Templates
 
@@ -17,6 +19,7 @@ To provide a dropdown `<select>` list of available languages:
 
     {{> i18n_dropdown}}             // Bootstrap
     {{> i18n_dropdown_semantic}}    // Semantic UI
+    {{> i18n_dropdown_ionic}}       // Ionic
 
 
 Both templates sort languages list by country code.
@@ -36,12 +39,6 @@ tap-i18n-ui also provides some other handlebars helpers:
     {{i18n_enabled}}                  // true if languages found
     {{i18n_sortedLanguages}}          // array of available languages
     {{i18n_isCurrentLanguage 'tag'}}  // true if given tag equals current language tag
-
-tap-i18n-ui uses localStorage to save your language choice accross refreshes. You can use `TAPi18n.setLanguageAmplify` to do this yourself.
-
-### Events
-
-You can define a `TAPi18n._afterUILanguageChange` function within your project to be called each time the language is changed using a tap-i18n-ui template.
 
 ---
 

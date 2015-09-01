@@ -1,0 +1,24 @@
+<template name="i18n_dropdown_ionic">
+  <span class="tap-i18n-dropdown">
+    {{#if i18n_enabled}}
+    <div class="list tap-i18n-dropdown">
+      <label class="item item-input item-select">
+        <div class="input-label">Language</div>
+        <select>
+          {{#each i18n_sortedLanguages}}
+            <option value="{{tag}}" selected={{i18n_isCurrentLanguage tag}}>{{name}}</option>
+          {{/each}}
+        </select>
+      </label>
+    </div>
+    {{else}}
+      <span class="i18n-not-found">No i18n files found</span>
+    {{/if}}
+  </span>
+</template>
+
+<!--
+<template name="i18n_buttons_ionic">
+  TODO Implement buttons for Ionic framework
+</template>
+-->
